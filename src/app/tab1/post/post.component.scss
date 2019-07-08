@@ -2,16 +2,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    padding: 10px;
+    align-items: center;
     .avatar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         img {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             border-radius: 50px;
         }
-
-        display: flex;
-        flex-direction: row
+        p {
+            margin: 0;
+            margin-left: 5px;
+        }
+    }
+    img {
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -23,28 +32,55 @@
         ul {
             list-style-type: none;
             padding: 0;
-
+            margin: 0;
             li {
                 display: inline;
+                margin-right: 5px;
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
             }
         }
-
     }
-
+    .cmt {
+        margin: 10px 0;
+        p {
+            margin: 0
+        }
+        .post-like {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .post-cmt {
+            font-weight: bold;
+            font-size: 13px;
+            span {
+                margin-left: 5px;
+                font-size: 13px;
+                font-weight: normal
+            }
+        }
+    }
     .cmt-input {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
-        .cmt {
-            img {
+        align-items: center;
+        .input {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+                img {
                 width: 30px;
                 height: 30px;
                 border-radius: 50px;
             }
-
             input {
-                width: 60%
+              border:none;
+              margin-left: 10px;
             }
         }
 
@@ -55,6 +91,10 @@
 
             li {
                 display: inline;
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
             }
         }
 
