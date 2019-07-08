@@ -2,3 +2,14 @@
   max-height: 35vh;
   overflow: hidden;
 }
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+    }
+  }
+}
