@@ -4,19 +4,33 @@
       <img
         src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MzAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzExMTA1NzIxNTkuanBn"
         alt="">
-      <p>Sky</p>
+      <p>{{item.user}}</p>
     </div>
-    <img src="../../../assets/show-more.png" alt="">
+    <img src="../../../assets/show-more.png" alt="" (click)="presentPopover($event)">
   </div>
   <div class="post-img">
-    <img
-      src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MzAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzExMTA1NzIxNTkuanBn"
-      alt="">
+    <ion-slides (ionSlideDidChange)="slideChanged()">
+      <ion-slide *ngFor="let img of item.image">
+        <img src="{{img}}" alt="">
+      </ion-slide>
+    </ion-slides>
+    <div class="slide-num" *ngIf="item.image.length > 1">
+      <ul>
+        <li *ngFor="let img of item.image; let i=index" >
+          <img src="../../../assets/circle.png" alt="" style="
+          width: 10px;margin-right: 2px;"  *ngIf="currentIndex != i">
+           <img src="../../../assets/dot-white.png" alt="" style="
+           width: 10px;margin-right: 2px;" *ngIf="currentIndex == i">
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="post-interact">
     <div class="interact-icon">
       <ul>
-        <li><img src="../../../assets/heart.png" alt=""></li>
+        <li>
+          <ion-icon name="heart-empty"></ion-icon>
+        </li>
         <li><img src="../../../assets/speech-bubble.png" alt=""></li>
         <li><img src="../../../assets/paper-plane.png" alt=""></li>
       </ul>

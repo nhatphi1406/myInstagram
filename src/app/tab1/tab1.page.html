@@ -28,20 +28,29 @@
 </ion-header> -->
 <div class="nav">
   <div class="nav-icon">
-    <img src="../../assets/photo-camera.png" alt="">
-    <p>Instagram</p>
+    <img src="../../assets/photo-camera.png" alt="" (click)="takePhoto()" class="camera">
+    <img src="../../assets/icon.png" alt="" class="logo">
   </div>
   <div>
     <ul>
       <li>
         <img src="../../assets/paper-plane.png" alt="">
       </li>
-      <li>
+      <!-- <li>
         <img src="../../assets/paper-plane.png" alt="">
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>
+
 <ion-content>
-  <app-post></app-post>
+  <div class="story">
+    <ul>
+      <li *ngFor="let item of story">
+        <img src="{{item.img}}" alt="" (click)="presentModal(item.img)">
+      </li>
+    </ul>
+  </div>
+  <app-post *ngFor="let item of list" [item]="item"></app-post>
+  <p>{{myPhoto}}</p>
 </ion-content>

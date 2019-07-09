@@ -4,38 +4,74 @@
     justify-content: space-between;
     padding: 10px;
     align-items: center;
+
     .avatar {
         display: flex;
         flex-direction: row;
         align-items: center;
+
         img {
             width: 30px;
             height: 30px;
             border-radius: 50px;
         }
+
         p {
             margin: 0;
             margin-left: 5px;
         }
     }
+
     img {
         width: 15px;
         height: 15px;
     }
 }
 
-.post-img {}
+.post-img {
+    position: relative;
+    ion-slides {
+        img {
+            width: 100%;
+            overflow: hidden;
+            min-height: 400px;
+        }
+    }
+   
+
+    .slide-num {
+        position: absolute;
+        bottom: 2px;
+        z-index: 100;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+            }
+        }
+    }
+}
 
 .post-interact {
     padding: 10px;
+    border-bottom: 1px solid #cccccc;
+
     .interact-icon {
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+
             li {
                 display: inline;
                 margin-right: 5px;
+
                 img {
                     width: 15px;
                     height: 15px;
@@ -43,19 +79,24 @@
             }
         }
     }
+
     .cmt {
         margin: 10px 0;
+
         p {
             margin: 0
         }
+
         .post-like {
             font-weight: bold;
             font-size: 14px;
             margin-bottom: 5px;
         }
+
         .post-cmt {
             font-weight: bold;
             font-size: 13px;
+
             span {
                 margin-left: 5px;
                 font-size: 13px;
@@ -63,24 +104,28 @@
             }
         }
     }
+
     .cmt-input {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
         .input {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-                img {
+
+            img {
                 width: 30px;
                 height: 30px;
                 border-radius: 50px;
             }
+
             input {
-              border:none;
-              margin-left: 10px;
+                border: none;
+                margin-left: 10px;
             }
         }
 
@@ -91,6 +136,7 @@
 
             li {
                 display: inline;
+
                 img {
                     width: 15px;
                     height: 15px;
