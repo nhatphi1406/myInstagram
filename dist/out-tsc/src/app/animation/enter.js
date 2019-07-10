@@ -1,0 +1,18 @@
+export function myEnterAnimation(AnimationC, baseEl) {
+    var baseAnimation = new AnimationC();
+    var backdropAnimation = new AnimationC();
+    backdropAnimation.addElement(baseEl.querySelector('ion-backdrop'));
+    var wrapperAnimation = new AnimationC();
+    wrapperAnimation.addElement(baseEl.querySelector('.modal-wrapper'));
+    wrapperAnimation.beforeStyles({ 'opacity': 1 })
+        .fromTo('translateX', '-100%', '0%');
+    backdropAnimation.fromTo('opacity', 0.01, 0.4);
+    return Promise.resolve(baseAnimation
+        .addElement(baseEl)
+        .easing('cubic-bezier(0.36,0.66,0.04,1)')
+        .duration(400)
+        .beforeAddClass('show-modal')
+        .add(backdropAnimation)
+        .add(wrapperAnimation));
+}
+//# sourceMappingURL=enter.js.map

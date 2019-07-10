@@ -1,20 +1,14 @@
 <ion-content>
-      
+
     <div class="user-profile">
-        <!-- <div class="user-profile-nav">
-            <p [routerLink]="['following']"
-                routerLinkActive="router-link-active">
-                thông tin
-            </p>
-            <p [routerLink]="['user']"
-                routerLinkActive="router-link-active">
-                tkb
-            </p>
-        </div> -->
-        
-        
+        <div class="user-profile-nav">
+            <ion-button  [routerLink]="['user']" routerLinkActive="router-link-active" [ngClass]="{active: infoToShow == 0}" (click)="changeInfoDisplay()" fill="clear" color="white"
+                >User</ion-button>
+            <ion-button  [routerLink]="['following']" routerLinkActive="router-link-active"  [ngClass]="{active: infoToShow == 1}" (click)="changeInfoDisplay()" fill="clear" color="white"
+               >Following
+            </ion-button>
+        </div>
         <ion-router-outlet></ion-router-outlet>
     </div>
-    <ion-button href="/user" (click)="talk()">Hello</ion-button>
-    <ion-button [routerLink]="['following']" routerLinkActive="router-link-active" (click)="talk()">Following</ion-button>
+
 </ion-content>
