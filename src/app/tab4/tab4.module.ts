@@ -1,26 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
-
 import { Tab4Page } from './tab4.page';
+import { Tab4PageRoutingModule } from './tab4.router.module';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: Tab4Page
-  }
-];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    Tab4PageRoutingModule
   ],
-  declarations: [Tab4Page]
+  declarations: [Tab4Page, SideMenuComponent],
+  entryComponents: [SideMenuComponent]
 })
 export class Tab4PageModule {}

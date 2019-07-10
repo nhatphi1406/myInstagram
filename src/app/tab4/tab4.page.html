@@ -1,9 +1,62 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+  <div class="profile">
+    <div class="profile-nav">
+      <p>
+        Sky
+      </p>
+      <ion-icon name="menu" (click)="presentModal()"></ion-icon>
+    </div>
+    <div class="profile-info">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3" class="avatar">
+            <img
+              src="https://images.pexels.com/photos/2549236/pexels-photo-2549236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="">
+              <ion-badge color="primary">+</ion-badge>
+          </ion-col>
+          <ion-col size="9" class="detail">
+            <ul>
+              <li>
+                <p>
+                  0
+                </p>
+                <p>
+                  Post
+                </p>
+              </li>
+              <li>
+                <p>
+                  0
+                </p>
+                <p>
+                  Post
+                </p>
+              </li>
+              <li>
+                <p>
+                  0
+                </p>
+                <p>
+                  Post
+                </p>
+              </li>
+            </ul>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="tab4/gallary" class="activated">
+        <ion-icon name="grid" md="md-grid"></ion-icon>
+      </ion-tab-button>
 
+      <ion-tab-button tab="tab4/tags-gallary">
+        <ion-icon name="photos"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
