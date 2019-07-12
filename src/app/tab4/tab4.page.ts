@@ -11,7 +11,10 @@ import { myLeaveAnimation } from '../animation/leave';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+  };
   constructor(private menu: MenuController, private router: Router, public modalController: ModalController) { }
 
   ngOnInit() {
@@ -27,6 +30,12 @@ export class Tab4Page implements OnInit {
     });
     return await modal.present();
   }
+  // slideChanged(){
+  //   this.slides.getActiveIndex().then(x=> {
+  //     this.infoToShow = x;
+  //   })
+    
+  // }
  
 
 }

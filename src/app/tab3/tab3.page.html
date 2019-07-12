@@ -2,11 +2,13 @@
 
     <div class="user-profile">
         <div class="user-profile-nav">
-            <ion-button  [routerLink]="['user']" routerLinkActive="router-link-active" [ngClass]="{active: infoToShow == 0}" (click)="changeInfoDisplay()" fill="clear" color="white"
+            <!-- <ion-button  [routerLink]="['user']" routerLinkActive="router-link-active" [ngClass]="{active: infoToShow == 0}" (click)="changeInfoDisplay()" fill="clear" color="white"
                 >User</ion-button>
             <ion-button  [routerLink]="['following']" routerLinkActive="router-link-active"  [ngClass]="{active: infoToShow == 1}" (click)="changeInfoDisplay()" fill="clear" color="white"
                >Following
-            </ion-button>
+            </ion-button> -->
+            <a  [ngClass]="{active: infoToShow == 0}" (click)="goTo(0)">You</a>
+            <a  [ngClass]="{active: infoToShow == 1}" (click)="goTo(1)">Following</a>
         </div>
         <ion-router-outlet></ion-router-outlet>
     </div>

@@ -1,0 +1,19 @@
+<div class="user-profile-nav">
+  <!-- <ion-button  [routerLink]="['user']" routerLinkActive="router-link-active" [ngClass]="{active: infoToShow == 0}" (click)="changeInfoDisplay()" fill="clear" color="white"
+      >User</ion-button>
+  <ion-button  [routerLink]="['following']" routerLinkActive="router-link-active"  [ngClass]="{active: infoToShow == 1}" (click)="changeInfoDisplay()" fill="clear" color="white"
+     >Following
+  </ion-button> -->
+  <a  [ngClass]="{active: infoToShow == 0}">You</a>
+  <a  [ngClass]="{active: infoToShow == 1}">Following</a>
+</div>
+<ion-content overflow-scroll="true">
+  <ion-slides #mySliders [options]="slideOpts"  (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <app-user-activity></app-user-activity>
+    </ion-slide>
+    <ion-slide>
+      <app-following-activity></app-following-activity>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

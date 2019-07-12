@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { Tab4Page } from './tab4.page';
 import { Tab4PageRoutingModule } from './tab4.router.module';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { GallaryPage } from './gallary/gallary.page';
+import { TagsGallaryPage } from './tags-gallary/tags-gallary.page';
 
 
 @NgModule({

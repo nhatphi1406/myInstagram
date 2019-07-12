@@ -1,3 +1,10 @@
-<p>
-  following-activity works!
-</p>
+<ion-list>
+    <ion-item lines="none" *ngFor="let item of status">
+      <ion-avatar slot="start">
+        <img src="{{item.avatar}}">
+      </ion-avatar>
+      <ion-label text-wrap>
+        <p>{{item.activity}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>

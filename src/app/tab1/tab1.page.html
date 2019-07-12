@@ -28,7 +28,7 @@
 </ion-header> -->
 <div class="nav">
   <div class="nav-icon">
-    <img src="../../assets/photo-camera.png" alt="" (click)="takePhoto()" class="camera">
+    <img src="../../assets/photo-camera.png" alt="" (click)="takePicture()" class="camera">
     <img src="../../assets/icon.png" alt="" class="logo">
   </div>
   <div>
@@ -52,5 +52,5 @@
     </ul>
   </div>
   <app-post *ngFor="let item of list" [item]="item"></app-post>
-  <p>{{myPhoto}}</p>
+  <img src="photo" >
 </ion-content>
